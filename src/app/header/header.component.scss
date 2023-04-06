@@ -83,15 +83,29 @@
 
 .menu-overlay {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background-color: $bg-color;
     z-index: 100;
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 70px;
+        font-family: 'syne-b';
+        font-size: 80px;
+        text-align: center;
+        span {
+            cursor: pointer;
+        }
+    }
     .menu-footer {
         background-color: #000;
         width: calc(100% + 300px);
-        height: 500px;
-        transform: rotate(10deg) translateX(-100px);
+        height: 550px;
+        transform: rotate(5deg) translateX(-100px);
         position: absolute;
         bottom: -250px;
     }
@@ -104,6 +118,11 @@
         gap: 30px;
         img {
             height: 25px;
+            cursor: pointer;
+            transition: all 250ms;
+            &:hover {
+                transform: translateY(-10px) rotate(5deg);
+            }
         }
     }
     .sayhi {

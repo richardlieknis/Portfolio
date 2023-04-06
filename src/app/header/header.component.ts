@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import {
   trigger,
   state,
@@ -22,9 +22,11 @@ import {
   ]
   
 })
-export class HeaderComponent {
-  isMenuOpen = true;
+export class HeaderComponent implements OnChanges {
+
+  isMenuOpen = false;
   isPlaying = false;
+  menuImgCount = 0;
   menuImage = 'assets/img/menu1.png';
   images = [
     'assets/img/menu1.png',
@@ -32,14 +34,48 @@ export class HeaderComponent {
     'assets/img/menu3.png',
     'assets/img/menu4.png',
     'assets/img/menu5.png'];
+  
+  ngOnChanges(changes: SimpleChanges): void {
+  }
+
 
   toggleMenu() {
-    if (this.isMenuOpen) {
-      this.isPlaying = false;
+    if (this.isMenuOpen && !this.isPlaying) {
+      this.closeMenuAnimation();
       setTimeout(() => this.isMenuOpen = false, 500);
-    } else {
+    } else if (!this.isPlaying) {
+      this.openMenuAnimation();
       this.isMenuOpen = true;
-      this.isPlaying = true;
     }
   }
+
+
+    
+  openMenuAnimation(){
+    let menuOpenAnim = setInterval(() => {
+    this.isPlaying = true;
+    this.menuImage = this.images[this.menuImgCount];
+    this.menuImgCount++;
+    if (this.menuImgCount == 5) {
+      clearInterval(menuOpenAnim);
+      this.menuImgCount = 4;
+      this.isPlaying = false;
+      } 
+    }, 100)
+  }
+
+  closeMenuAnimation(){
+    let menuCloseAnim = setInterval(() => {
+    this.isPlaying = true;
+    this.menuImage = this.images[this.menuImgCount];
+    this.menuImgCount--;
+    if (this.menuImgCount == -1) {
+      clearInterval(menuCloseAnim);
+      this.menuImgCount = 0;
+      this.isPlaying = false;
+      }
+    }, 100)
+  }
+
+  
 }
