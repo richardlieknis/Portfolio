@@ -1,9 +1,24 @@
 <div class="header">
     <div class="header-menu">
         <img class="logo" src="assets/img/logo.png">
-        <img class="menu" src="assets/img/menu1.png">
+        <img (click)="toggleMenu()" class="menu" src="{{menuImage}}">
     </div>
-    <div class="headline">
+
+    <div *ngIf="isMenuOpen" class="menu-overlay">
+        <div class="menu-footer"></div>
+        <div class="sayhi">
+            <h1>Say Hi!</h1>
+            <span>hello@richardlieknis.com</span>
+        </div>
+        <div class="social">
+            <img src="assets/img/github.png">
+            <img src="assets/img/email.png">
+            <img src="assets/img/linkedin.png">
+
+        </div>
+    </div>
+
+    <div @fadeIn class="headline">
         <h1>Frontend<br> Developer</h1>
         <div class="subtitle">
             <div class="line"></div>

@@ -1,10 +1,12 @@
 .header {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
+$bg-color: #fffcf3;
 .header-menu {
-    background-color: #fffcf3;
+    background-color: $bg-color;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
@@ -12,10 +14,12 @@
     .logo {
         filter: invert(1);
         cursor: pointer;
+        z-index: 1000;
     }
     .menu {
         width: 30px;
         cursor: pointer;
+        z-index: 1000;
     }
 }
 
@@ -28,6 +32,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
     .subtitle {
         margin-top: 10px;
         display: flex;
@@ -55,7 +60,6 @@
 }
 
 .header-bottom {
-    background-color: #fffcf3;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
@@ -68,9 +72,47 @@
     font-size: 14px;
     .mail {
         writing-mode: vertical-lr;
+        scale: (-1);
         cursor: pointer;
     }
     .scrolldown {
         text-align: center;
+        user-select: none;
+    }
+}
+
+.menu-overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #fffcf3;
+    z-index: 100;
+    .menu-footer {
+        background-color: #000;
+        width: calc(100% + 300px);
+        height: 500px;
+        transform: rotate(10deg) translateX(-100px);
+        position: absolute;
+        bottom: -250px;
+    }
+    .social {
+        position: absolute;
+        bottom: 130px;
+        right: 100px;
+        z-index: 1000;
+        display: flex;
+        gap: 30px;
+        img {
+            height: 25px;
+        }
+    }
+    .sayhi {
+        h1 {
+            font-family: 'syne-eb';
+            font-size: 80px
+        }
+        span {
+            font-family: 'overpass-m';
+        }
     }
 }
