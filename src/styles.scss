@@ -3,7 +3,27 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'overpass-b';
+    src: url(assets/fonts/Overpass-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'overpass-m';
+    src: url(assets/fonts/Overpass-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'syne-b';
+    src: url(assets/fonts/Syne-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'syne-eb';
+    src: url(assets/fonts/Syne-ExtraBold.ttf);
+}
+
 body {
     background-image: url(assets/img/bg.jpg);
-    background-position: left center;
+    background-repeat: repeat;
 }
