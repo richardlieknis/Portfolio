@@ -1,3 +1,4 @@
+@import 'variables.scss';
 * {
     margin: 0;
     padding: 0;
@@ -26,4 +27,33 @@
 body {
     background-image: url(assets/img/bg.jpg);
     background-repeat: repeat;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+
+
+/* Firefox */
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: $highlight $bg-color;
+}
+
+
+/* Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $bg-color;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $highlight;
+    border-radius: 0px;
+    border: 0px solid $bg-color;
 }
