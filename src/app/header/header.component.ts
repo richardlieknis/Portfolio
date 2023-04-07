@@ -15,15 +15,30 @@ import {
   animations: [
     trigger('fadeIn', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translate(0px, -30px)'}),
-        animate('1250ms', style({opacity: 1, transform: 'translate(0, 0)'}))
+        style({ opacity: 0, transform: 'translate(0px, -20px)'}),
+        animate('850ms', style({opacity: 1, transform: 'translate(0, 0)'}))
       ])]
     ),
-  ]
-  
+
+    trigger('slideIn', [
+      state('show', style({
+        // transform: 'translateY(-2000px)',
+        // opacity: 1,
+      })),
+      state('hide', style({
+        transform: 'translateY(1000px)',
+        opacity: 0,
+      })),
+      transition('* <=> *', [
+        animate('500ms')
+      ])
+    ])
+
+  ],
+
 })
 export class HeaderComponent implements OnChanges {
-
+  menuState = 'hide';
   isMenuOpen = false;
   isPlaying = false;
   menuImgCount = 0;
@@ -41,9 +56,11 @@ export class HeaderComponent implements OnChanges {
 
   toggleMenu() {
     if (this.isMenuOpen && !this.isPlaying) {
+      this.menuState = 'hide';
       this.closeMenuAnimation();
       setTimeout(() => this.isMenuOpen = false, 500);
     } else if (!this.isPlaying) {
+      setTimeout(() => this.menuState = 'slide', 500);
       this.openMenuAnimation();
       this.isMenuOpen = true;
     }
