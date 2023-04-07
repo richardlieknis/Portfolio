@@ -22,17 +22,32 @@ import {
 
     trigger('slideIn', [
       state('show', style({
-        // transform: 'translateY(-2000px)',
-        // opacity: 1,
+        transform: 'translateY(0px) rotate(5deg)',
+        opacity: 1,
       })),
       state('hide', style({
-        transform: 'translateY(1000px)',
+        transform: 'translateY(200px)',
         opacity: 0,
       })),
       transition('* <=> *', [
         animate('500ms')
       ])
-    ])
+    ]),
+
+    trigger('menuFadeIn', [
+      state('show', style({
+        transform: 'translateY(0px)',
+        opacity: 1,
+      })),
+      state('hide', style({
+        transform: 'translateY(-500px)',
+        opacity: 0,
+      })),
+      transition('*<=>*', [
+        animate('250ms')
+      ])
+    ]),
+    
 
   ],
 
@@ -60,7 +75,7 @@ export class HeaderComponent implements OnChanges {
       this.closeMenuAnimation();
       setTimeout(() => this.isMenuOpen = false, 500);
     } else if (!this.isPlaying) {
-      setTimeout(() => this.menuState = 'slide', 500);
+      setTimeout(() => this.menuState = 'show', 100);
       this.openMenuAnimation();
       this.isMenuOpen = true;
     }

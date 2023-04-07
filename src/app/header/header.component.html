@@ -5,7 +5,7 @@
     </div>
 
     <div *ngIf="isMenuOpen" class="menu-overlay">
-        <div class="menu-links">
+        <div [@menuFadeIn]="menuState" class="menu-links">
             <span>About me</span>
             <span>My skills</span>
             <span>Portfolio</span>
