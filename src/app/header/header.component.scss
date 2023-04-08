@@ -66,7 +66,6 @@
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -81,6 +80,8 @@
     .scrolldown {
         text-align: center;
         user-select: none;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -95,12 +96,12 @@
     .menu-links {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        padding-bottom: 120px;
         gap: 40px;
-        margin-top: 170px;
         font-family: 'syne-b';
         font-size: 80px;
         text-align: center;
-        transform: translateY(1000px);
         opacity: 0;
         z-index: 500;
         span {

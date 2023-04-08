@@ -7,7 +7,7 @@
     <div *ngIf="isMenuOpen" class="menu-overlay">
         <div [@menuFadeIn]="menuState" class="menu-links">
             <span>About me</span>
-            <span>My skills</span>
+            <span><a href="#myskills" (click)="toggleMenu()">My skills</a></span>
             <span>Portfolio</span>
         </div>
         <div [@slideIn]="menuState" class="menu-footer"></div>
