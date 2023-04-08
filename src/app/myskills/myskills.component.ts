@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./myskills.component.scss']
 })
 export class MyskillsComponent {
-
+skills: string[] = [
+    'Angular',
+    'TypeScript',
+    'Javascript',
+    'CSS',
+    'HTML',
+    'Firebase',
+    'Git',
+    'MaterialDesign',
+    'Scrum',
+    'Wordpress',
+  ];
 }

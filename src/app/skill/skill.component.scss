@@ -1,5 +1,7 @@
 @import '../../variables.scss';
 .skill-container {
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -9,18 +11,18 @@
 
 .skill-container .image img {
     max-width: 100%;
-    height: auto;
+    height: 60px;
     position: relative;
 }
 
 .skill-container:hover .image img {
-    animation: anim 1s linear infinite;
+    animation: anim 1s linear;
 }
 
 .skill-container .name {
     font-family: 'overpass-m';
     position: absolute;
-    bottom: -30px;
+    bottom: -25px;
     transition: color 0.3s ease;
     user-select: none;
 }

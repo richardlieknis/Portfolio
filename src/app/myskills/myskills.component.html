@@ -2,11 +2,7 @@
     <div class="myskills">
         <h1>My Skills</h1>
         <div class="skillbox">
-            <app-skill></app-skill>
-            <app-skill></app-skill>
-            <app-skill></app-skill>
-            <app-skill></app-skill>
-            <app-skill></app-skill>
+            <app-skill *ngFor="let skill of skills" [name]="skill"></app-skill>
         </div>
 
 
