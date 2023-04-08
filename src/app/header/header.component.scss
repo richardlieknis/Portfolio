@@ -81,7 +81,26 @@
         text-align: center;
         user-select: none;
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .arrowbox {
+            overflow: hidden;
+            height: 100px;
+            img {
+                width: 30px;
+                animation: infinite 2s pointDown;
+            }
+        }
+    }
+}
+
+@keyframes pointDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(150px);
     }
 }
 

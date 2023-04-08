@@ -21,7 +21,8 @@
         margin-bottom: 40px;
         transition: color 220ms;
         user-select: none;
-        width: 450px;
+        width: fit-content;
+        padding: 0 20px;
         text-align: center;
         background-color: $bg-color;
         z-index: 5;

@@ -6,9 +6,9 @@
 
     <div *ngIf="isMenuOpen" class="menu-overlay">
         <div [@menuFadeIn]="menuState" class="menu-links">
-            <span>About me</span>
+            <span><a href="#aboutme" (click)="toggleMenu()">About me</a></span>
             <span><a href="#myskills" (click)="toggleMenu()">My skills</a></span>
-            <span>Portfolio</span>
+            <span><a href="#portfolio" (click)="toggleMenu()">Portfolio</a></span>
         </div>
         <div [@slideIn]="menuState" class="menu-footer"></div>
         <div class="sayhi">
@@ -35,7 +35,12 @@
             hello@richardlieknis.com
         </div>
         <div class="scrolldown">
-            Scroll<br> Down
+            <div class="arrowbox">
+                <img src="assets/img/arrow-down.png">
+
+            </div>
+            Scroll
+            <br> Down
         </div>
     </div>
 </div>

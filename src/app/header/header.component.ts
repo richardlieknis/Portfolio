@@ -16,7 +16,7 @@ import {
     trigger('fadeIn', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translate(0px, -20px)'}),
-        animate('850ms', style({opacity: 1, transform: 'translate(0, 0)'}))
+        animate('1250ms', style({opacity: 1, transform: 'translate(0, 0)'}))
       ])]
     ),
 

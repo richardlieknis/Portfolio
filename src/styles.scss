@@ -2,6 +2,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+    scrollbar-width: auto;
+    scrollbar-color: $highlight $bg-color;
 }
 
 @font-face {
@@ -28,20 +35,6 @@ body {
     background-image: url(assets/img/bg.jpg);
     background-repeat: repeat;
 }
-
-
-/* ===== Scrollbar CSS ===== */
-
-
-/* Firefox */
-
-* {
-    scrollbar-width: auto;
-    scrollbar-color: $highlight $bg-color;
-}
-
-
-/* Chrome, Edge, and Safari */
 
 *::-webkit-scrollbar {
     width: 3px;
