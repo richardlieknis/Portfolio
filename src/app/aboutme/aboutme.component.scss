@@ -1,4 +1,10 @@
 @import '../../variables.scss';
+.info-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .aboutme {
     padding: 0 100px;
     margin-top: 70px;
@@ -19,12 +25,6 @@
             color: $highlight;
         }
     }
-}
-
-.info-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }
 
 .aboutme-info {
@@ -59,14 +59,12 @@
         img {
             width: 350px;
             filter: grayscale(0.2);
-            border-radius: 5px;
         }
         .boxborder {
             position: absolute;
             top: 0;
             width: 350px;
             height: 350px;
-            border-radius: 5px;
             transition: all 125ms;
             &:hover {
                 border: 4px solid #000;

@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+.project-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.projects {
+    padding: 0 100px;
+    height: 100vh;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        width: fit-content;
+        font-family: 'syne-eb';
+        font-size: 60px;
+        transition: color 220ms;
+        user-select: none;
+        &:hover {
+            color: $highlight;
+        }
+    }
+    h2 {
+        font-family: 'overpass-m';
+        font-weight: unset;
+    }
+}
