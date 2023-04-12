@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+.project-container:hover .boxborder {
+    border: 4px solid #000;
+    transform: translate(10px, 10px);
+}
+
+.project-container:hover .boxborder img {
+    transform: rotate(0deg) !important;
+    scale: 0.8 !important;
+    opacity: 1;
+}
+
+.project-container:hover .preview-img {
+    filter: grayscale(0.4);
+}
+
+.project-container {
+    background-color: aquamarine;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.preview-box {
+    position: relative;
+    .preview-img {
+        width: 550px;
+        height: 300px;
+        object-fit: cover;
+        filter: grayscale(1);
+    }
+    .boxborder {
+        position: absolute;
+        top: 0;
+        width: 550px;
+        height: 300px;
+        transition: all 125ms;
+        img {
+            transform: rotate(135deg);
+            scale: 0.1;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: -40px;
+            top: 40%;
+            transition: transform 225ms, scale 325ms;
+        }
+    }
+}
+
+.info-box {}
