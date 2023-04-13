@@ -1,12 +1,12 @@
-<div class="project-container">
-    <div class="project-count">01 / 05</div>
+<div class="project-container" [ngClass]="{'direction-reverse': preImgRight}">
+    <div class="project-count" [ngClass]="{'count-left': preImgRight}">01 / 05</div>
     <div class="preview-box">
         <img class="preview-img" src="assets/img/pokedex.png">
-        <div class="boxborder">
+        <div class="boxborder" [ngClass]="{'border-left': preImgRight}">
             <img src="assets/img/project-arrow.svg">
         </div>
     </div>
-    <div class="info-box">
+    <div class="info-box" [ngClass]="{'info-right': preImgRight}">
         <span>Pokedex</span>
         <div class="tech">Javascript | CSS | API</div>
         <div class="description">Lorem Ipsum levalia grandiosa! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sit ullam omnis numquam autem excepturi, mollitia consequatur minus.</div>
