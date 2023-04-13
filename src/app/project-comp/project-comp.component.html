@@ -1,18 +1,18 @@
 <div class="project-container" [ngClass]="{'direction-reverse': preImgRight}">
-    <div class="project-count" [ngClass]="{'count-left': preImgRight}">01 / 05</div>
+    <div class="project-count" [ngClass]="{'count-left': preImgRight}">{{ (0 + (projIndex + 1).toString().slice(-2))}} / {{ (0 + (projectJson.length).toString().slice(-2))}}</div>
     <div class="preview-box">
-        <img class="preview-img" src="assets/img/pokedex.png">
+        <img class="preview-img" src="assets/img/{{projectJson[projIndex].image}}">
         <div class="boxborder" [ngClass]="{'border-left': preImgRight}">
             <img src="assets/img/project-arrow.svg">
         </div>
     </div>
     <div class="info-box" [ngClass]="{'info-right': preImgRight}">
-        <span>Pokedex</span>
-        <div class="tech">Javascript | CSS | API</div>
-        <div class="description">Lorem Ipsum levalia grandiosa! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sit ullam omnis numquam autem excepturi, mollitia consequatur minus.</div>
+        <span>{{projectJson[projIndex].title}}</span>
+        <div class="tech">{{projectJson[projIndex].tech.join(' | ')}}</div>
+        <div class="description">{{projectJson[projIndex].description}}</div>
         <div class="links">
-            <div class="link">Github</div>
-            <div class="link">Live</div>
+            <div class="link"><a target="_blank" href="{{projectJson[projIndex].github}}">Github</a></div>
+            <div class="link"><a target="_blank" href="{{projectJson[projIndex].demo}}">Live</a></div>
         </div>
     </div>
 </div>

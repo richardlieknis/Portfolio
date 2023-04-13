@@ -6,7 +6,27 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./project-comp.component.scss']
 })
 export class ProjectCompComponent implements OnInit {
-  @Input() preImgRight: boolean = true;
+  @Input() preImgRight: boolean = false;
+  @Input() projIndex: number = 0;
+
+  projectJson:any = [
+    {
+      title: "Join",
+      image: "join.png",
+      tech: ["Javascript", "HTML", "CSS"],
+      description: "Group-project",
+      github: "https://github.com",
+      demo: "https://github.com"
+    },
+    {
+      title: "Pokedex",
+      image: "pokedex.png",
+      tech: ["Javascript", "CSS", "API"],
+      description: "Pocket Monster Deck",
+      github: "https://github.com",
+      demo: "https://github.com"
+    },
+  ]
   
   constructor() {
     
@@ -14,5 +34,6 @@ export class ProjectCompComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.projectJson);
   }
 }
