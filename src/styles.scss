@@ -9,6 +9,7 @@
     }
     scrollbar-width: auto;
     scrollbar-color: $highlight $bg-color;
+    scroll-behavior: smooth;
 }
 
 @font-face {

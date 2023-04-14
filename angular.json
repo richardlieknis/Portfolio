@@ -31,6 +31,7 @@
                         ],
                         "styles": [
                             "src/styles.scss",
+                            "src/variables.scss",
                             "node_modules/aos/dist/aos.css"
 
                         ],
@@ -97,6 +98,7 @@
                         ],
                         "styles": [
                             "src/styles.scss",
+                            "src/variables.scss",
                             "node_modules/aos/dist/aos.css"
                         ],
                         "scripts": []
