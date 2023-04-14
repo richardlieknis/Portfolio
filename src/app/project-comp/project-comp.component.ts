@@ -14,7 +14,14 @@ export class ProjectCompComponent implements OnInit {
       title: "Join",
       image: "join.png",
       tech: ["Javascript", "HTML", "CSS"],
-      description: "Group-project",
+      description: "Task manager inspired by the Kanban system. Create and organize tasks using the drag and drop function, assign these to users, and use specific categories. ",
+      github: "https://github.com",
+      demo: "https://github.com"
+    },{
+      title: "El Pollo Loco",
+      image: "elpollo.png",
+      tech: ["Javascript", "OOP", "HTML", "CSS"],
+      description: "Javascript-based and object-orientated jump & run game. Help Pepe save the village from El Pollo Loco!",
       github: "https://github.com",
       demo: "https://github.com"
     },
@@ -22,7 +29,7 @@ export class ProjectCompComponent implements OnInit {
       title: "Pokedex",
       image: "pokedex.png",
       tech: ["Javascript", "CSS", "API"],
-      description: "Pocket Monster Deck",
+      description: '"Pocket-Monster-Deck" using Rest API',
       github: "https://github.com",
       demo: "https://github.com"
     },
@@ -34,6 +41,9 @@ export class ProjectCompComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.projectJson);
+    let odd = this.projIndex % 2;
+    if (odd === 0) {
+      this.preImgRight = false;
+    } else this.preImgRight = true;
   }
 }

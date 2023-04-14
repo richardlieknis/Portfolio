@@ -16,12 +16,13 @@
 
 .project-container:hover .info-box {
     transform: translateY(0px);
+    opacity: 1;
 }
 
 .project-container {
     position: relative;
     margin-bottom: 80px;
-    width: 1100px;
+    min-width: 1100px;
     display: flex;
     justify-content: space-between;
     gap: 100px;
@@ -35,6 +36,7 @@
         width: 550px;
         height: 300px;
         object-fit: cover;
+        box-shadow: 0 3px 10px #0002;
         filter: grayscale(1);
     }
     .boxborder {
@@ -65,7 +67,8 @@
     justify-content: center;
     gap: 10px;
     font-family: 'overpass-m';
-    transition: transform 225ms;
+    opacity: 0;
+    transition: transform 225ms, opacity 825ms;
     span {
         font-size: 3rem;
         font-family: 'syne-b';
