@@ -76,4 +76,17 @@
             font-size: 10px;
         }
     }
+    .legalnotice {
+        span {
+            background: linear-gradient(90deg, $highlight, $bg-color);
+            background-size: 0% 1px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size 225ms ease;
+            &:hover {
+                background-size: 100% 1px;
+                cursor: pointer;
+            }
+        }
+    }
 }

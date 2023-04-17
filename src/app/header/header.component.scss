@@ -77,6 +77,10 @@
         writing-mode: vertical-lr;
         scale: (-1);
         cursor: pointer;
+        transition: color 225ms ease-in-out;
+        &:hover {
+            color: $highlight;
+        }
     }
     .scrolldown {
         text-align: center;
@@ -121,11 +125,37 @@
         gap: 40px;
         font-family: 'syne-b';
         font-size: 80px;
-        text-align: center;
+        text-align: left;
         opacity: 0;
         z-index: 500;
         span {
+            padding: 0 15px;
+            background: linear-gradient(90deg, black, black);
+            background-size: 10% 4px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
             cursor: pointer;
+            transition: background-size 225ms ease;
+            &:hover {
+                background-size: 100% 4px;
+                animation: menuLine 1s;
+            }
+        }
+    }
+    @keyframes menuLine {
+        0% {
+            background-size: 10% 4px;
+        }
+        20% {
+            background-size: 30% 4px;
+        }
+        50% {
+            background-size: 10% 4px;
+        }
+        70% {}
+        90% {}
+        100% {
+            background-size: 100% 4px;
         }
     }
     .menu-footer {
