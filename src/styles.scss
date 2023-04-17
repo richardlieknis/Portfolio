@@ -12,6 +12,22 @@
     scroll-behavior: smooth;
 }
 
+.d-none {
+    display: none !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visable {
+    visibility: visible;
+}
+
+.preventScrolling {
+    overflow: hidden;
+}
+
 @font-face {
     font-family: 'overpass-b';
     src: url(assets/fonts/Overpass-Bold.ttf);
