@@ -31,7 +31,7 @@ export class ContactComponent {
     sendEmail() {
         this.httpClient
             .post<any>(
-                'send_mail/send_mail.php',
+                'https://richard-lieknis.developerakademie.net/send_mail/send_mail.php',
                 this.setFormData()
             )
             .subscribe({
