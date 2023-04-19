@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCompComponent } from './project-comp/project-comp.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     SkillComponent,
     ProjectsComponent,
     ProjectCompComponent,
-    ContactComponent
+    ContactComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
