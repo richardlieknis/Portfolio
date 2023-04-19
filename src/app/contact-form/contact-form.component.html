@@ -1,6 +1,8 @@
 <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
     <div data-aos="fade-left" class="floating-label-group">
-        <input type="text" id="name" formControlName="name" />
+
+        <input type="text" id="name" formControlName="name" required/>
+
         <label class="floating-label">Your name</label>
         <span class="hidden" [ngClass]="{
                                 visable:
@@ -91,8 +93,8 @@
                                             contactForm.get('message')?.touched))
                             }"
                             class="hidden"
-                            >Your message needs min.
-                            {{ this.minLength }} characters.
+                            >Please enter atleast
+                            {{ this.minLength }} characters :)
                         </span>
         <img [ngClass]="{
                                 visable:
