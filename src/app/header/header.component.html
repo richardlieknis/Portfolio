@@ -1,6 +1,6 @@
 <div class="header">
     <div class="header-menu">
-        <img class="logo" src="assets/img/logo.svg">
+        <img onclick="location.reload()" class="logo" src="assets/img/logo.svg">
         <img (click)="toggleMenu()" class="menu" src="{{menuImage}}">
     </div>
 
@@ -13,7 +13,7 @@
         <div [@slideIn]="menuState" class="menu-footer"></div>
         <div class="sayhi">
             <h1>Say Hi!</h1>
-            <span><a href="#contact" (click)="toggleMenu()">hello@richardlieknis.com</a></span>
+            <span>hello@richardlieknis.com</span>
         </div>
         <div class="social">
             <img src="assets/img/github.png">

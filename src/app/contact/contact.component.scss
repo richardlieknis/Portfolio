@@ -49,6 +49,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 30px;
     .desc {
         margin-bottom: 40px;
     }
@@ -240,12 +241,10 @@ input[data-autocompleted] {
 }
 
 .button {
-    position: unset;
     color: $bg-color;
     background-color: black;
     border: 4px solid $bg-color;
-    padding: 10px 30px;
-    margin-bottom: 17px;
+    font-family: unset;
 }
 
 .contact-popup {

@@ -28,6 +28,19 @@
     overflow: hidden;
 }
 
+.button {
+    margin-top: 30px;
+    border: 4px solid #000;
+    background-color: $bg-color;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: all 200ms;
+    &:hover {
+        font-family: 'overpass-b';
+        padding: 10px 50px;
+    }
+}
+
 @font-face {
     font-family: 'overpass-b';
     src: url(assets/fonts/Overpass-Bold.ttf);

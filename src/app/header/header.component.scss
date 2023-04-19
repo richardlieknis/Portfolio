@@ -44,8 +44,8 @@
         gap: 10px;
         .line {
             width: 400px;
-            height: 0px;
             border: 1px solid #000;
+            transform: translateY(4px);
         }
     }
     h1 {
@@ -187,18 +187,18 @@
         bottom: 30px;
         left: 100px;
         color: $bg-color;
-        user-select: none;
         h1 {
             font-family: 'syne-eb';
             font-size: 80px;
             transition: all 250ms;
+            user-select: none;
             &:hover {
                 color: $highlight;
             }
         }
         span {
             font-family: 'overpass-m';
-            cursor: pointer;
+            user-select: all;
         }
     }
 }
