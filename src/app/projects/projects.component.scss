@@ -6,7 +6,7 @@
 }
 
 .projects {
-    padding: 0 100px;
+    padding: 0 clamp(1.25rem, 15vw, 6.25rem);
     width: 100%;
     max-width: 1300px;
     display: flex;
@@ -15,7 +15,7 @@
     h1 {
         width: fit-content;
         font-family: 'syne-eb';
-        font-size: 60px;
+        font-size: clamp(1.25rem, 9vw, 3.75rem);
         transition: color 220ms;
         user-select: none;
         &:hover {
@@ -26,9 +26,7 @@
         font-family: 'overpass-m';
         font-weight: unset;
         margin-bottom: 50px;
+        text-align: center;
+        font-size: clamp(1rem, 3vw, 1.25rem);
     }
-}
-
-.test {
-    background-color: #f00;
 }

@@ -29,12 +29,38 @@
     user-select: none;
 }
 
+@media (max-width: 1300px){
+    .project-container {
+        justify-content: center !important;
+        flex-direction: column;
+        min-width: 300px !important;
+        gap: 20px !important;
+        margin-bottom: 120px !important;
+    }
+    .project-count {
+        top: -40px !important;
+    }
+    .direction-reverse {
+        flex-direction: column !important;
+    }
+        .info-right {
+            transform: translateX(0px) !important;
+            // transform: translateY(-400px) !important;
+        }
+}
+
+@media (max-width: 550px){
+    .boxborder img {
+        display: none !important;
+    }
+}
+
 .preview-box {
     position: relative;
     z-index: 2;
     .preview-img {
-        width: 550px;
-        height: 300px;
+        width: clamp(300px , 40vw , 550px);
+        height: clamp(100px, 40vw, 300px);
         object-fit: cover;
         box-shadow: 0 3px 10px #0002;
         filter: grayscale(1);
@@ -42,14 +68,15 @@
     .boxborder {
         position: absolute;
         top: 0;
-        width: 550px;
-        height: 300px;
+        width: clamp(300px, 40vw, 550px);
+        height: clamp(100px, 40vw, 300px);
         transition: all 125ms;
         img {
             transform: rotate(135deg);
             scale: 0.1;
             opacity: 0;
             display: flex;
+            width: clamp(30px,10vw,75px);
             align-items: center;
             position: absolute;
             right: -40px;
@@ -61,7 +88,7 @@
 
 .info-box {
     transform: translateX(-600px);
-    width: 100%;
+    max-width: clamp(300px, 40vw, 550px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +131,8 @@
     display: flex;
     right: 0;
     font-family: 'overpass-b';
-    font-size: 2.2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
+    z-index: 4;
 }
 
 .count-left {
