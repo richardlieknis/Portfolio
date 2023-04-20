@@ -7,7 +7,7 @@
 
 .header-menu {
     background-color: $bg-color;
-    padding: 30px 100px;
+    padding: 30px clamp(1.25rem, 15vw ,6.25rem);
     max-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -38,25 +38,25 @@
     align-items: center;
     z-index: 0;
     .subtitle {
-        margin-top: 10px;
+        margin-top: clamp(.125rem,4vw,.625rem);
         display: flex;
         align-items: center;
         gap: 10px;
         .line {
-            width: 400px;
+            width: clamp(6.25rem, 30vw, 25rem);
             border: 1px solid #000;
             transform: translateY(4px);
         }
     }
     h1 {
         font-family: 'syne-eb';
-        font-size: 80px;
+        font-size: clamp(2rem, 10vw, 5rem);
         text-align: center;
-        line-height: 60px;
+        line-height: clamp(2rem, 7vw, 3.75rem);
     }
     h3 {
         margin-top: 10px;
-        font-size: 24px;
+        font-size: clamp(.875rem, 4vw, 1.5rem);
         text-align: right;
         font-family: 'overpass-b';
         color: $highlight;
@@ -64,7 +64,7 @@
 }
 
 .header-bottom {
-    padding: 30px 100px;
+    padding: 30px clamp(1.25rem, 15vw, 6.25rem);
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -124,7 +124,7 @@
         padding-bottom: 120px;
         gap: 40px;
         font-family: 'syne-b';
-        font-size: 80px;
+        font-size: clamp(1.5rem, 10vw, 5rem);
         text-align: left;
         opacity: 0;
         z-index: 500;
@@ -189,7 +189,7 @@
         color: $bg-color;
         h1 {
             font-family: 'syne-eb';
-            font-size: 80px;
+            font-size: clamp(1.5rem,10vw,5rem);
             transition: all 250ms;
             user-select: none;
             &:hover {
