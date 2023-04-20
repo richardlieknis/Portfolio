@@ -6,7 +6,7 @@
 }
 
 .aboutme {
-    padding: 0 100px;
+    padding: 0 clamp(1.25rem, 15vw, 6.25rem);
     margin-top: 70px;
     width: 100%;
     max-width: 1300px;
@@ -16,10 +16,12 @@
     h1 {
         width: fit-content;
         font-family: 'syne-eb';
-        font-size: 60px;
+        font-size: clamp(1.25rem,9vw,3.75rem);
         margin-bottom: 40px;
         transition: color 220ms;
         user-select: none;
+        text-align: center;
+        white-space: nowrap;
         &:hover {
             color: $highlight;
         }
@@ -61,12 +63,30 @@
     }
 }
 
+@media (max-width: 900px) {
+    .aboutme-info {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 500px) {
+    .img {
+            img {
+                width: clamp(10rem,50vw,12.5rem) !important;
+            }
+    .boxborder {
+            width: clamp(10rem, 50vw, 12.5rem) !important;
+            height: clamp(10rem, 50vw, 12.5rem) !important;
+        }
+    }
+}
+
 .arrow-route {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     img {
-        margin: 30px 200px 0 0;
+        margin: 30px clamp(0rem,5vw ,12.5rem) 0 0;
         cursor: pointer;
         width: 180px;
     }
