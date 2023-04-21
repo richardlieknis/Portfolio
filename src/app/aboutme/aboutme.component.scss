@@ -36,6 +36,9 @@
     font-size: 22px;
     word-spacing: 5px;
     gap: 30px;
+    p {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
     .info {
         display: flex;
         flex-direction: column;
@@ -64,19 +67,27 @@
 }
 
 @media (max-width: 900px) {
+    .aboutme {
+        align-items: center;
+    }
     .aboutme-info {
         flex-direction: column-reverse;
+    }
+    img {
+        width: 100% !important;
     }
 }
 
 @media (max-width: 500px) {
     .img {
-            img {
-                width: clamp(10rem,50vw,12.5rem) !important;
+        img {
+                // width: clamp(10rem,50vw,12.5rem) !important;
             }
-    .boxborder {
-            width: clamp(10rem, 50vw, 12.5rem) !important;
-            height: clamp(10rem, 50vw, 12.5rem) !important;
+        .boxborder {
+            width: 100%;
+            height: 100%;
+            // width: clamp(10rem, 50vw, 12.5rem) !important;
+            // height: clamp(10rem, 50vw, 12.5rem) !important;
         }
     }
 }

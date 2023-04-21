@@ -14,7 +14,7 @@
     align-items: center;
     margin-bottom: 50px;
     h1 {
-        transform: translateY(75px);
+        transform: translateY(clamp(50px, 16vw, 75px));
         font-family: 'syne-eb';
         font-size: clamp(.625rem, 9vw, 3.75rem);
         margin-bottom: 40px;

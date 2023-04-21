@@ -109,6 +109,12 @@
     }
 }
 
+@media (max-width: 500px){
+    .sayhi {
+        bottom: 80px !important;
+    }
+}
+
 .menu-overlay {
     position: fixed;
     display: flex;
@@ -169,7 +175,7 @@
     .social {
         position: absolute;
         bottom: 30px;
-        right: 100px;
+        right: clamp(.625rem, 8vw, 6.25rem);
         z-index: 1000;
         display: flex;
         gap: 30px;
@@ -185,7 +191,7 @@
     .sayhi {
         position: absolute;
         bottom: 30px;
-        left: 100px;
+        left: clamp(.625rem, 8vw, 6.25rem);
         color: $bg-color;
         h1 {
             font-family: 'syne-eb';

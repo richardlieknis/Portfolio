@@ -139,10 +139,15 @@
     .page-up {
         position: absolute;
         bottom: 100px;
-        right: 150px;
+        right: 100px;   
+        transition: transform 1s;
         img {
             width: 30px;
             scale: -1;
+            
+        }
+        &:hover {
+            transform: translateY(-10px) scaleY(1.2);
         }
     }
 }

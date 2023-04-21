@@ -93,33 +93,3 @@ textarea {
         padding: 10px 20px;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .contact-wrapper {
-        padding-top: 60px;
-    }
-    .contact-form {
-        form {
-            width: 100%;
-        }
-    }
-    .button {
-        width: 247px;
-    }
-    .contact-form {
-        p {
-            margin-bottom: 35px;
-        }
-    }
-    .floating-label-group {
-        margin: 0;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .button {
-        margin: 60px auto;
-        font-size: 18px;
-        width: 170px;
-    }
-}
