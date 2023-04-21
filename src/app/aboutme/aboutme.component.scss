@@ -99,6 +99,6 @@
     img {
         margin: 30px clamp(0rem,5vw ,12.5rem) 0 0;
         cursor: pointer;
-        width: 180px;
+        width: 180px !important;
     }
 }

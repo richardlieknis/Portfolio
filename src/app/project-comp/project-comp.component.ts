@@ -27,7 +27,7 @@ export class ProjectCompComponent implements OnInit {
     },
     {
       title: "Ring of Fire",
-      image: "pokedex.png",
+      image: "ringoffire-mockup.png",
       tech: ["TypeScript", "Angular", "Firebase", "SCSS"],
       description: 'Famous Drinking-Game Online',
       github: "https://github.com",
