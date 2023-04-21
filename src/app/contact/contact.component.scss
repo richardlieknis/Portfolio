@@ -20,8 +20,32 @@
     }
 }
 
+@media (max-width: 900px) {
+    .contactme {
+        flex-direction: column-reverse;
+    }
+    .contact-container {
+        padding-bottom: unset !important;
+    }
+    .contact-footer {
+        margin-top: 40px;
+    }
+    .page-up {
+        display: none;
+    }
+    .creator,
+    .links,
+    .legalnotice {
+        position: unset !important;
+        align-items: center;
+    }
+    .creator span {
+        font-size: 12px !important;
+    }
+}
+
 .contactme {
-    padding: 0 100px;
+    padding: 0 clamp(.625rem, 8vw, 6.25rem);
     margin-top: 170px;
     width: 100%;
     max-width: 1300px;
@@ -31,7 +55,7 @@
     h1 {
         width: fit-content;
         font-family: 'syne-eb';
-        font-size: 60px;
+        font-size: clamp(1.25rem, 9vw, 3.75rem);
         margin-bottom: 40px;
         transition: color 220ms;
         user-select: none;
@@ -40,8 +64,14 @@
         }
     }
     h2 {
+        font-size: clamp(1rem, 5vw, 1.5rem);
         color: $highlight;
+        margin-bottom: 15px;
     }
+    p {
+        font-size: clamp(.75rem, 3vw, 1rem);
+    }
+    
 }
 
 .main-content {
