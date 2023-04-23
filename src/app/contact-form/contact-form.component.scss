@@ -69,6 +69,27 @@ textarea {
     }
 }
 
+.send-msg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .success-alert {
+        position: absolute;
+        top: 0;
+        color: $highlight;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: msgSent 3s;
+    }
+}
+
+@keyframes msgSent {
+    0% {opacity: 0; transform: translateY(30px);}
+    50% {opacity: 1;transform: translateY(0px);}
+    85% {opacity: 1;}
+    100% {opacity: 0;transform: translateY(0px);}
+}
+
 .button {
     color: $bg-color;
     background-color: black;

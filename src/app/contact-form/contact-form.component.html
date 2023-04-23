@@ -1,109 +1,110 @@
 <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
-    <div data-aos="fade-left" class="floating-label-group">
-
-        <input type="text" id="name" formControlName="name" required/>
-        <label class="floating-label">Your name</label>
-        <span 
-            class="hidden" 
-            [ngClass]="{visable: contactForm
-                .get('name')
-                ?.hasError('required') &&
-                (contactForm.get('name')?.dirty ||
-                contactForm.get('name')?.touched)
-                }">
-                Your name is required
-        </span>
-        <img class="hidden"
-                        [ngClass]="{visable: contactForm
-                            .get('name')
-                                    ?.hasError('required') &&
-                                    (contactForm.get('name')?.dirty ||
-                                    contactForm.get('name')?.touched)
-                                }"
-                        src="assets/img/warning.png"
-                        />
-                    <img
-                    class="hidden"
-                        [ngClass]="{visable: isSubmitted}"
-                        src="assets/img/success.png"
-                        />
-            </div>
-            <div data-aos="fade-right" class="floating-label-group">
-                <input type="text" id="email" formControlName="email" />
-                <label class="floating-label">Your email</label>
-                <span
-                [ngClass]="{
-                        visable:
-                        contactForm
-                            .get('email')
-                                ?.hasError('email') ||
-                                (contactForm
-                            .get('email')
-                                ?.hasError('required') &&
-                                (contactForm.get('email')?.dirty ||
-                                contactForm.get('email')?.touched))
-                                }"
-                    class="hidden"
-                    >Your email is required</span
-                    >
-                <img
-                [ngClass]="{
-                        visable:
-                        contactForm
-                            .get('email')
-                                ?.hasError('required') &&
-                                (contactForm.get('email')?.dirty ||
-                            contactForm.get('email')?.touched)
-                            }"
-                    class="hidden"
-                    src="assets/img/warning.png"
-                    />
-                <img
-                class="hidden"
-                    [ngClass]="{
-                        visable: isSubmitted
-                    }"
-                    src="assets/img/success.png"
-                    />
-            </div>
-            <div data-aos="fade-left" class="floating-label-group">
-                <textarea
-                type="text"
-                    id="message"
-                    style="height: 200px"
-                    autocomplete="off"
-                    formControlName="message"
-                    ></textarea>
-                <label class="floating-label">Your message</label>
-                <span
-                [ngClass]="{
-                        visable:
-                        contactForm
-                            .get('message')
-                                ?.hasError('minlength') ||
-                                (contactForm
-                            .get('message')
-                                ?.hasError('required') &&
-                                (contactForm.get('message')?.dirty ||
-                                contactForm.get('message')?.touched))
-                                }"
-                    class="hidden"
-                    >Please enter atleast
-                    {{ this.minLength }} characters :)
-                </span>
-        <img [ngClass]="{
-                                visable:
-                                    contactForm
-                                        .get('message')
-                                        ?.hasError('required') &&
-                                    (contactForm.get('message')?.dirty ||
-                                        contactForm.get('message')?.touched)
-                            }" class="hidden" src="assets/img/warning.png" />
-        <img class="hidden" [ngClass]="{
-                                visable: isSubmitted
-                            }" src="assets/img/success.png" />
-    </div>
-    <button [disabled]="contactForm.invalid" type="submit" #sendButton class="button">
-                        Send message
-                    </button>
+  <div data-aos="fade-left" class="floating-label-group">
+    <input type="text" id="name" formControlName="name" required />
+    <label class="floating-label">Your name</label>
+    <span
+      class="hidden"
+      [ngClass]="{
+        visable:
+          contactForm.get('name')?.hasError('required') &&
+          (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)
+      }"
+    >
+      Your name is required
+    </span>
+    <img
+      class="hidden"
+      [ngClass]="{
+        visable:
+          contactForm.get('name')?.hasError('required') &&
+          (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)
+      }"
+      src="assets/img/warning.png"
+    />
+    <img
+      class="hidden"
+      [ngClass]="{ visable: isSubmitted }"
+      src="assets/img/success.png"
+    />
+  </div>
+  <div data-aos="fade-right" class="floating-label-group">
+    <input type="text" id="email" formControlName="email" />
+    <label class="floating-label">Your email</label>
+    <span
+      [ngClass]="{
+        visable:
+          contactForm.get('email')?.hasError('email') ||
+          (contactForm.get('email')?.hasError('required') &&
+            (contactForm.get('email')?.dirty ||
+              contactForm.get('email')?.touched))
+      }"
+      class="hidden"
+      >Your email is required</span
+    >
+    <img
+      [ngClass]="{
+        visable:
+          contactForm.get('email')?.hasError('required') &&
+          (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)
+      }"
+      class="hidden"
+      src="assets/img/warning.png"
+    />
+    <img
+      class="hidden"
+      [ngClass]="{
+        visable: isSubmitted
+      }"
+      src="assets/img/success.png"
+    />
+  </div>
+  <div data-aos="fade-left" class="floating-label-group">
+    <textarea
+      type="text"
+      id="message"
+      style="height: 200px"
+      autocomplete="off"
+      formControlName="message"
+    ></textarea>
+    <label class="floating-label">Your message</label>
+    <span
+      [ngClass]="{
+        visable:
+          contactForm.get('message')?.hasError('minlength') ||
+          (contactForm.get('message')?.hasError('required') &&
+            (contactForm.get('message')?.dirty ||
+              contactForm.get('message')?.touched))
+      }"
+      class="hidden"
+      >Please enter atleast {{ this.minLength }} characters :)
+    </span>
+    <img
+      [ngClass]="{
+        visable:
+          contactForm.get('message')?.hasError('required') &&
+          (contactForm.get('message')?.dirty ||
+            contactForm.get('message')?.touched)
+      }"
+      class="hidden"
+      src="assets/img/warning.png"
+    />
+    <img
+      class="hidden"
+      [ngClass]="{
+        visable: isSubmitted
+      }"
+      src="assets/img/success.png"
+    />
+  </div>
+  <div class="send-msg">
+    <div *ngIf="isSubmitted" class="success-alert">Message sent!</div>
+    <button
+      [disabled]="contactForm.invalid"
+      type="submit"
+      #sendButton
+      class="button"
+    >
+      Send message
+    </button>
+  </div>
 </form>

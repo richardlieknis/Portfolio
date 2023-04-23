@@ -38,12 +38,11 @@ export class ContactFormComponent {
                 complete: () => (this.emailSent = true),
                 error: () => (this.emailNotSent = true),
             });
-
         this.isSubmitted = true;
 
         setTimeout(() => {
             this.isSubmitted = false;
-        }, 2000);
+        }, 3000);
 
         this.contactForm.reset();
     }
