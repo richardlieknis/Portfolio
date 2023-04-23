@@ -34,7 +34,8 @@ textarea {
     margin-bottom: 25px;
     font-size: 16px;
     span {
-        color: #f00;
+        font-size: 12px;
+        color: rgb(222, 37, 37);
         margin-top: 10px;
     }
     img {
@@ -54,7 +55,8 @@ textarea {
         width: max-content;
         transition: all 225ms ease;
     }
-    input:focus~.floating-label {
+    input:focus~.floating-label,
+    input:not(:focus):valid~.floating-label {
         top: -9.5px;
         left: 0px;
         opacity: 1;

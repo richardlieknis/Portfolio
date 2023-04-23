@@ -1,46 +1,54 @@
 <div class="header">
-    <div class="header-menu">
-        <img onclick="location.reload()" class="logo" src="assets/img/logo.svg">
-        <img (click)="toggleMenu()" class="menu" src="{{menuImage}}">
-    </div>
+  <div class="header-menu">
+    <img onclick="location.reload()" class="logo" src="assets/img/logo.svg" />
+    <img (click)="toggleMenu()" class="menu" src="{{ menuImage }}" />
+  </div>
 
-    <div *ngIf="isMenuOpen" class="menu-overlay">
-        <div [@menuFadeIn]="menuState" class="menu-links">
-            <span><a href="#aboutme" (click)="toggleMenu()">About me</a></span>
-            <span><a href="#myskills" (click)="toggleMenu()">My skills</a></span>
-            <span><a href="#portfolio" (click)="toggleMenu()">Portfolio</a></span>
-        </div>
-        <div [@slideIn]="menuState" class="menu-footer"></div>
-        <div class="sayhi">
-            <h1>Say Hi!</h1>
-            <span>hello@richardlieknis.com</span>
-        </div>
-        <div class="social">
-            <img src="assets/img/github.png">
-            <img src="assets/img/email.png">
-            <img src="assets/img/linkedin.png">
-
-        </div>
+  <div *ngIf="isMenuOpen" class="menu-overlay">
+    <div [@menuFadeIn]="menuState" class="menu-links">
+      <span><a href="#aboutme" (click)="toggleMenu()">About me</a></span>
+      <span><a href="#myskills" (click)="toggleMenu()">My skills</a></span>
+      <span><a href="#portfolio" (click)="toggleMenu()">Portfolio</a></span>
     </div>
-
-    <div @fadeIn class="headline">
-        <h1>Frontend<br> Developer</h1>
-        <div class="subtitle">
-            <div class="line"></div>
-            <h3>Richard Lieknis</h3>
-        </div>
+    <div [@slideIn]="menuState" class="menu-footer"></div>
+    <div class="sayhi">
+      <h1>Say Hi!</h1>
+      <span>hello@richardlieknis.com</span>
     </div>
-    <div class="header-bottom">
-        <div class="mail">
-            <a href="#contact">hello@richardlieknis.com</a>
-        </div>
-        <div class="scrolldown">
-            <div class="arrowbox">
-                <img src="assets/img/arrow-down.png">
-
-            </div>
-            Scroll
-            <br> Down
-        </div>
+    <div class="social">
+      <a href="https://github.com/rycc00" target="_blank">
+        <img src="assets/img/github.png" />
+      </a>
+      <a href="mailto: richard.lieknis@web.de">
+        <img src="assets/img/email.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/richardlieknis/" target="_blank">
+        <img src="assets/img/linkedin.png" />
+      </a>
     </div>
+  </div>
+
+  <div @fadeIn class="headline">
+    <h1>
+      Frontend<br />
+      Developer
+    </h1>
+    <div class="subtitle">
+      <div class="line"></div>
+      <h3>Richard Lieknis</h3>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="mail">
+      <a href="#contact">hello@richardlieknis.com</a>
+    </div>
+    <div class="scrolldown">
+      <div class="arrowbox">
+        <img src="assets/img/arrow-down.png" />
+      </div>
+      Scroll
+      <br />
+      Down
+    </div>
+  </div>
 </div>

@@ -28,7 +28,7 @@
     />
   </div>
   <div data-aos="fade-right" class="floating-label-group">
-    <input type="text" id="email" formControlName="email" />
+    <input type="text" id="email" formControlName="email" required />
     <label class="floating-label">Your email</label>
     <span
       [ngClass]="{
@@ -65,6 +65,7 @@
       style="height: 200px"
       autocomplete="off"
       formControlName="message"
+      required
     ></textarea>
     <label class="floating-label">Your message</label>
     <span
