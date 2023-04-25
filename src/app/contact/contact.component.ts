@@ -11,7 +11,8 @@ export class ContactComponent {
 
   openImprint() {
     this.dialog.open(LegalnoticeComponent, {
-      height: '600px'
+      maxHeight: '600px',
+      maxWidth: '1200px'
     });
   }
 }

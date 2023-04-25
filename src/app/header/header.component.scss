@@ -128,21 +128,21 @@
         flex-direction: column;
         justify-content: center;
         padding-bottom: 120px;
-        gap: 40px;
+        gap: 120px;
         font-family: 'syne-b';
         font-size: clamp(1.5rem, 10vw, 5rem);
         text-align: left;
         opacity: 0;
         z-index: 500;
         span {
-            padding: 0 15px;
+            // padding: 0 15px;
             background: linear-gradient(90deg, black, black);
             background-size: 10% 4px;
             background-repeat: no-repeat;
-            background-position: left bottom;
-            cursor: pointer;
+            background-position-y: left bottom !important;
             transition: background-size 225ms ease;
             &:hover {
+                cursor: pointer;
                 background-size: 100% 4px;
                 animation: menuLine 1s;
             }
@@ -193,6 +193,7 @@
         bottom: 30px;
         left: clamp(.625rem, 8vw, 6.25rem);
         color: $bg-color;
+        z-index: 500;
         h1 {
             font-family: 'syne-eb';
             font-size: clamp(1.5rem,10vw,5rem);
