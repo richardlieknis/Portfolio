@@ -30,10 +30,10 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.scss",
-                            "src/variables.scss",
-                            "node_modules/aos/dist/aos.css"
-
+                          "@angular/material/prebuilt-themes/deeppurple-amber.css",
+                          "src/styles.scss",
+                          "src/variables.scss",
+                          "node_modules/aos/dist/aos.css"
                         ],
                         "scripts": [
                             "node_modules/aos/dist/aos.js"
@@ -97,9 +97,10 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.scss",
-                            "src/variables.scss",
-                            "node_modules/aos/dist/aos.css"
+                          "@angular/material/prebuilt-themes/deeppurple-amber.css",
+                          "src/styles.scss",
+                          "src/variables.scss",
+                          "node_modules/aos/dist/aos.css"
                         ],
                         "scripts": []
                     }
