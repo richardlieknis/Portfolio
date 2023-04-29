@@ -1,12 +1,18 @@
-<div id="myskills" class="myskills-container">
-    <div class="myskills">
-        <h1>My Skills</h1>
-        <div class="skillbox">
-            <app-skill data-aos="fade-up" data-aos-offset="200" data-aos-anchor-placement="center-bottom" *ngFor="let skill of skills" [name]="skill"></app-skill>
-        </div>
-
-        <div data-aos="fade-down-right" class="arrow-route">
-            <a href="#portfolio"><img src="assets/img/arrow-r-short.png"></a>
-        </div>
+<div id="myskills" style="padding-top: 40px" class="myskills-container">
+  <div class="myskills">
+    <h1>My Skills</h1>
+    <div class="skillbox">
+      <app-skill
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-anchor-placement="center-bottom"
+        *ngFor="let skill of skills"
+        [name]="skill"
+      ></app-skill>
     </div>
+
+    <div data-aos="fade-down-right" class="arrow-route">
+      <a href="#portfolio"><img src="assets/img/arrow-r-short.png" /></a>
+    </div>
+  </div>
 </div>

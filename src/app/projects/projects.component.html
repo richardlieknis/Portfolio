@@ -1,8 +1,11 @@
-<div id="portfolio" class="project-container">
+<div id="portfolio" style="padding-top: 110px" class="project-container">
   <div class="projects">
     <h1>Portfolio</h1>
     <h2>Samples of my work - please feel free to try them out.</h2>
     <app-project-comp
+      data-aos="fade-down"
+      data-aos-offset="400"
+      data-aos-duration="1500"
       *ngFor="let project of projects; let i = index"
       [projIndex]="i"
     ></app-project-comp>
