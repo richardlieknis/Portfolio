@@ -1,10 +1,16 @@
 <div class="header">
   <div class="header-menu">
-    <img onclick="location.reload()" class="logo" src="assets/img/logo.svg" />
+    <a href="https://www.richardlieknis.com/"
+      ><img class="logo" src="assets/img/logo.svg"
+    /></a>
     <img (click)="toggleMenu()" class="menu" src="{{ menuImage }}" />
   </div>
 
-  <div *ngIf="isMenuOpen" class="menu-overlay">
+  <div
+    *ngIf="isMenuOpen"
+    [class.preventScrolling]="isMenuOpen"
+    class="menu-overlay"
+  >
     <div [@menuFadeIn]="menuState" class="menu-links">
       <span><a href="#aboutme" (click)="toggleMenu()">About me</a></span>
       <span><a href="#myskills" (click)="toggleMenu()">My skills</a></span>
@@ -16,10 +22,10 @@
       <span>hello@richardlieknis.com</span>
     </div>
     <div class="social">
-      <a href="https://github.com/rycc00" target="_blank">
+      <a href="https://github.com/richardlieknis" target="_blank">
         <img src="assets/img/github.png" />
       </a>
-      <a href="mailto: richard.lieknis@web.de">
+      <a href="mailto: hello@richardlieknis.com">
         <img src="assets/img/email.png" />
       </a>
       <a href="https://www.linkedin.com/in/richardlieknis/" target="_blank">

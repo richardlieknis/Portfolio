@@ -124,6 +124,7 @@
     height: 100vh;
     background-color: $bg-color;
     z-index: 100;
+    overflow: hidden;
     .menu-links {
         display: flex;
         flex-direction: column;
@@ -136,11 +137,12 @@
         opacity: 0;
         z-index: 500;
         span {
-            // padding: 0 15px;
+            padding: 0 15px;
+            height: clamp(25px, 12vw, 50px);
             background: linear-gradient(90deg, black, black);
             background-size: 10% 4px;
             background-repeat: no-repeat;
-            background-position-y: left bottom !important;
+            background-position: left bottom !important;
             transition: background-size 225ms ease;
             &:hover {
                 cursor: pointer;
