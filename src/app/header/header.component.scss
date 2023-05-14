@@ -20,6 +20,10 @@
         filter: invert(0);
         cursor: pointer;
         height: 35px;
+        transition: scale 225ms;
+        &:hover {
+            scale: 0.97;
+        }
     }
     .menu {
         height: 25px;

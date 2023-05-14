@@ -35,9 +35,11 @@
     font-family: 'overpass-m';
     font-size: 22px;
     word-spacing: 5px;
+    line-height: 30px;
     gap: 30px;
     p {
-        font-size: clamp(1rem, 5vw, 1.5rem);
+        font-size: clamp(1rem, 5vw, 1.4rem);
+        margin-bottom: 30px;
     }
     .info {
         display: flex;

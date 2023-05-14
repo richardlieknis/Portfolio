@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, HostListener, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import {
   trigger,
   state,
@@ -18,22 +18,22 @@ import {
         style({ opacity: 0, transform: 'translate(0px, -20px)'}),
         animate('1250ms', style({opacity: 1, transform: 'translate(0, 0)'}))
       ])]
-    ),
-
-    trigger('slideIn', [
-      state('show', style({
-        transform: 'translateY(0px) rotate(5deg)',
-        opacity: 1,
-      })),
-      state('hide', style({
-        transform: 'translateY(200px)',
+      ),
+      
+      trigger('slideIn', [
+        state('show', style({
+          transform: 'translateY(0px) rotate(5deg)',
+          opacity: 1,
+        })),
+        state('hide', style({
+          transform: 'translateY(200px)',
         opacity: 0,
       })),
       transition('* <=> *', [
         animate('500ms')
       ])
     ]),
-
+    
     trigger('menuFadeIn', [
       state('show', style({
         transform: 'translateY(0px)',
@@ -47,12 +47,11 @@ import {
         animate('250ms')
       ])
     ]),
-    
-
   ],
-
 })
-export class HeaderComponent implements OnChanges {
+
+
+export class HeaderComponent implements OnChanges, OnInit {
   menuState = 'hide';
   isMenuOpen = false;
   isPlaying = false;
@@ -64,8 +63,27 @@ export class HeaderComponent implements OnChanges {
     'assets/img/menu3.png',
     'assets/img/menu4.png',
     'assets/img/menu5.png'];
-  
-  ngOnChanges(changes: SimpleChanges): void {
+    
+    
+    ngOnChanges(changes: SimpleChanges): void {
+    }
+    
+    ngOnInit(): void {
+    }
+    
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    let frontend = document.getElementById('frontend');
+    let developer = document.getElementById('developer');
+    let sub = document.getElementById('sub');
+    const maxScroll = 450;
+    const currentScroll = window.scrollY;
+
+    const translateY = window.scrollY / 2;
+    const opacity = 1 - (currentScroll / maxScroll);
+    frontend!.style.transform = `translateX(${translateY}px)`;
+    developer!.style.transform = `translateX(-${translateY}px)`;
+    sub!.style.opacity = `${opacity}`;
   }
 
 
@@ -107,7 +125,5 @@ export class HeaderComponent implements OnChanges {
       this.isPlaying = false;
       }
     }, 100)
-  }
-
-  
+  } 
 }
