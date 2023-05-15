@@ -78,14 +78,12 @@ export class HeaderComponent implements OnChanges, OnInit {
     let sub = document.getElementById('sub');
     const maxScroll = 450;
     const currentScroll = window.scrollY;
-
     const translateY = window.scrollY / 2;
     const opacity = 1 - (currentScroll / maxScroll);
     frontend!.style.transform = `translateX(${translateY}px)`;
     developer!.style.transform = `translateX(-${translateY}px)`;
     sub!.style.opacity = `${opacity}`;
   }
-
 
   toggleMenu() {
     if (this.isMenuOpen && !this.isPlaying) {
