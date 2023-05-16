@@ -1,6 +1,6 @@
 $bg-color: #fffcf3;
 $highlight: #00bc8f;
-$txt-color: #1f1f1f;
+$txt-color: #121212;
 
 
 // mixin that enables css variables in light mode
@@ -10,6 +10,7 @@ $txt-color: #1f1f1f;
   --border-color: #{$txt-color};
   --highlight: #{$highlight};
   --invert: invert(0);
+  --bg-image: url(assets/img/bg.png);
 }
 @mixin darken() {
   --bg-color: #{$txt-color};
@@ -17,4 +18,5 @@ $txt-color: #1f1f1f;
   --border-color: #{$bg-color};
   --highlight: #{$highlight};
   --invert: invert(1);
+    --bg-image: url(assets/img/bg_dark.png);
 }
