@@ -8,8 +8,21 @@
         color: unset;
     }
     scrollbar-width: auto;
-    scrollbar-color: $highlight $bg-color;
+    scrollbar-color: $highlight var(--bg-color);
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url(assets/img/bg.png);
+    background-repeat: repeat;
+}
+
+body.dark {
+    @include darken();
+}
+body.light {
+    @include lighten();
 }
 
 
@@ -30,9 +43,10 @@
 }
 
 .button {
+    color: var(--txt-color);
     margin-top: 30px;
-    border: 4px solid #000;
-    background-color: $bg-color;
+    border: 4px solid var(--txt-color);
+    background-color: var(--bg-color);
     padding: 10px 30px;
     cursor: pointer;
     transition: all 200ms;
@@ -62,29 +76,22 @@
     src: url(assets/fonts/Syne-ExtraBold.ttf);
 }
 
-body {
-    background-image: url(assets/img/bg.jpg);
-    background-repeat: repeat;
-}
-
 *::-webkit-scrollbar {
     width: 3px;
     height: 3px;
 }
 
 *::-webkit-scrollbar-track {
-    background: $bg-color;
+    background: var(--bg-color);
 }
 
 *::-webkit-scrollbar-thumb {
     background-color: $highlight;
     border-radius: 0px;
-    border: 0px solid $bg-color;
+    border: 0px solid var(--bg-color);
 }
 
 ::selection {
     background-color: $highlight;
     font-size: 20px;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,5 +1,7 @@
 @import '../../variables.scss';
 .imprint {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
   padding: clamp(5px, 10vw, 25px);
   font-family: 'overpass-m';
   .head {

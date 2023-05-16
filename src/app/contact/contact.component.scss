@@ -6,11 +6,11 @@
     width: 100%;
     font-family: 'overpass-m';
     background-color: #000;
-    color: $bg-color;
+    color: $bg-color !important;
     padding-bottom: 40px;
     overflow-x: hidden;
     .black-slide {
-        background-color: $bg-color;
+        background-color: var(--bg-color);
         position: absolute;
         left: -35px;
         transform: rotate(5deg) translateY(-150px);

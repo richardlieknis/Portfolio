@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--txt-color);
     h1 {
         width: fit-content;
         font-family: 'syne-eb';
@@ -62,7 +63,7 @@
             height: 100%;
             transition: all 125ms;
             &:hover {
-                border: 4px solid #000;
+                border: 4px solid var(--txt-color);
                 transform: translate(10px, 10px);
             }
         }
@@ -90,7 +91,7 @@
         .boxborder {
             width: 100%;
             height: 100%;
-            border: 4px solid #000;
+            border: 4px solid var(--txt-color);
             transform: translate(10px, 10px);
         }
     }
@@ -101,7 +102,7 @@
     display: flex;
     justify-content: flex-end;
     img {
-        // margin: 30px clamp(0rem,5vw ,12.5rem) 0 0;
+        filter: var(--invert);
         cursor: pointer;
         width: 180px !important;
     }

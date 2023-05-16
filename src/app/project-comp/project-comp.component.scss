@@ -1,10 +1,11 @@
 @import '../../variables.scss';
 .project-container:hover .boxborder {
-    border: 4px solid #000;
+    border: 4px solid var(--txt-color);
     transform: translate(10px, 10px);
 }
 
 .project-container:hover .boxborder img {
+    filter: var(--invert);
     transform: rotate(0deg) !important;
     scale: 0.8 !important;
     opacity: 1;
@@ -27,6 +28,7 @@
     justify-content: space-between;
     gap: 100px;
     user-select: none;
+    color: var(--txt-color);
 }
 
 @media (max-width: 1300px){
@@ -52,9 +54,10 @@
         opacity: 1 !important;
     }
     .boxborder {
-        border: 4px solid #000;
+        border: 4px solid var(--txt-color);
         transform: translate(10px, 10px);
         img {
+            filter: var(--invert);
             opacity: 0 !important;
 
         }
@@ -130,18 +133,6 @@
     .links {
         display: flex;
         gap: 30px;
-        .link {
-            margin-top: 30px;
-            border: 4px solid #000;
-            background-color: $bg-color;
-            padding: 10px 30px;
-            cursor: pointer;
-            transition: all 200ms;
-            &:hover {
-                font-family: 'overpass-b';
-                padding: 10px 50px;
-            }
-        }
     }
 }
 

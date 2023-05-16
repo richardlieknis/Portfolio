@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { LibModule } from './lib/lib.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dial
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    LibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
