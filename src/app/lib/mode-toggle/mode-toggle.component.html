@@ -1,6 +1,4 @@
-<div class="toggle-btn-container">
-  <button (click)="toggle()">
-    <span class="light">LIGHT</span>
-    <span class="dark">DARK</span>
-  </button>
-</div>
+<label class="switch">
+  <input [checked]="currentMode" type="checkbox" (click)="toggle()" />
+  <span class="slider"></span>
+</label>

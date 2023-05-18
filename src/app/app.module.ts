@@ -14,8 +14,9 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
-import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { LibModule } from './lib/lib.module';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LibModule } from './lib/lib.module';
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
-    LibModule
+    LibModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

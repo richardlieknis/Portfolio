@@ -17,6 +17,11 @@
     z-index: 800;
     left: 0;
     right: 0;
+    .right-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
     .logo {
         filter: var(--invert);
         cursor: pointer;
@@ -29,6 +34,7 @@
     .menu {
         filter: var(--invert);
         height: 25px;
+        width: 30px;
         cursor: pointer;
     }
 }

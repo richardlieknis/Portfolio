@@ -5,6 +5,8 @@ import {
 } from "./mode-storage.service";
 import { ModeToggleComponent } from "./mode-toggle.component";
 import { ModeToggleService } from "./mode-toggle.service";
+import { MatSlideToggle } from "@angular/material/slide-toggle";
+
 
 /**
  * Angular module for mode toggling feature

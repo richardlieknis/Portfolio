@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ModeToggleService } from "./mode-toggle.service";
 
 /**
@@ -14,8 +14,18 @@ import { ModeToggleService } from "./mode-toggle.service";
   templateUrl: "mode-toggle.component.html",
   styleUrls: ["mode-toggle.component.scss"],
 })
-export class ModeToggleComponent {
-  constructor(private modeToggleService: ModeToggleService) {}
+export class ModeToggleComponent implements OnInit {
+  currentMode!: boolean;
+  constructor(private modeToggleService: ModeToggleService) { }
+  
+  ngOnInit(): void {
+    let mode = localStorage.getItem('mode');
+
+    if (mode === "light") {
+      this.currentMode = false;
+    } else this.currentMode = true;
+    
+  }
 
   toggle() {
     this.modeToggleService.toggleMode();
