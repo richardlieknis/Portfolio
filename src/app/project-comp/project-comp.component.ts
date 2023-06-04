@@ -16,14 +16,14 @@ export class ProjectCompComponent implements OnInit {
       tech: ["Javascript", "HTML", "CSS"],
       description: "Task manager inspired by the Kanban system. Create and organize tasks using the drag and drop function, assign these to users, and use specific categories. ",
       github: "https://github.com/rycc00/join",
-      demo: "https://richard-lieknis.developerakademie.net/join/"
+      demo: "https://richardlieknis.com/projects/join/"
     },{
       title: "El Pollo Loco",
       image: "elpollo-mockup.png",
       tech: ["Javascript", "OOP", "HTML", "CSS"],
       description: "Javascript-based and object-orientated jump & run game. Help Pepe save the village from El Pollo Loco!",
       github: "https://github.com/rycc00/elPolloLoco",
-      demo: "https://richard-lieknis.developerakademie.net/elpolloloco/"
+      demo: "https://richardlieknis.com/projects/elpolloloco/"
     },
     {
       title: "Ring of Fire",
@@ -39,7 +39,7 @@ export class ProjectCompComponent implements OnInit {
       tech: ["Javascript", "CSS", "API"],
       description: '"Pocket-Monster-Deck" using Rest API',
       github: "https://github.com/rycc00/pokedex",
-      demo: "https://richard-lieknis.developerakademie.net/pokedex/"
+      demo: "https://richardlieknis.com/projects/pokedex/"
     },
   ]
   

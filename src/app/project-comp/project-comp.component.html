@@ -4,13 +4,17 @@
     {{ 0 + projectJson.length.toString().slice(-2) }}
   </div>
   <div class="preview-box">
-    <img
-      class="preview-img"
-      src="assets/img/{{ projectJson[projIndex].image }}"
-    />
-    <div class="boxborder" [ngClass]="{ 'border-left': preImgRight }">
-      <img src="assets/img/project-arrow.svg" />
-    </div>
+    <a href="{{ projectJson[projIndex].demo }}" target="_blank">
+      <img
+        class="preview-img"
+        src="assets/img/{{ projectJson[projIndex].image }}"
+      />
+    </a>
+    <a href="{{ projectJson[projIndex].demo }}" target="_blank">
+      <div class="boxborder" [ngClass]="{ 'border-left': preImgRight }">
+        <img src="assets/img/project-arrow.svg" />
+      </div>
+    </a>
   </div>
   <div class="info-box" [ngClass]="{ 'info-right': preImgRight }">
     <span>{{ projectJson[projIndex].title }}</span>

@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +25,6 @@ body.light {
     @include lighten();
 }
 
-
 .d-none {
     display: none !important;
 }
@@ -51,28 +50,28 @@ body.light {
     cursor: pointer;
     transition: all 200ms;
     &:hover {
-        font-family: 'overpass-b';
+        font-family: "overpass-b";
         padding: 10px 50px;
     }
 }
 
 @font-face {
-    font-family: 'overpass-b';
+    font-family: "overpass-b";
     src: url(assets/fonts/Overpass-Bold.ttf);
 }
 
 @font-face {
-    font-family: 'overpass-m';
+    font-family: "overpass-m";
     src: url(assets/fonts/Overpass-Medium.ttf);
 }
 
 @font-face {
-    font-family: 'syne-b';
+    font-family: "syne-b";
     src: url(assets/fonts/Syne-Bold.ttf);
 }
 
 @font-face {
-    font-family: 'syne-eb';
+    font-family: "syne-eb";
     src: url(assets/fonts/Syne-ExtraBold.ttf);
 }
 

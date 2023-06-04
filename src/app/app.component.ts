@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
       AOS.init({
-            offset: 100,
+            offset: 150,
             once: true,
         });
   }
