@@ -16,7 +16,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LibModule } from './lib/lib.module';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     HttpClientModule,
     MatDialogModule,
     LibModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

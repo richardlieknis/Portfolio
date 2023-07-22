@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  projects = ['join', 'elpollo', 'ringof', 'pokedex'];
+  projects = ['join', 'elpollo', 'simplecrm', 'ringof', 'pokedex'];
 
 }
