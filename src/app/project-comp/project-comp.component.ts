@@ -11,9 +11,16 @@ export class ProjectCompComponent implements OnInit {
 
   projectJson:any = [
     {
+      title: "TeamSync",
+      image: "teamsync-mockup.png",
+      tech: ["TypeScript", "Angular", "Firebase", "SCSS"],
+      description: "Angular & Firebase based Slack Clone that allows you to create channels, send messages, and upload files. It also has a built-in authentication system and a user profile page.",
+      github: "https://github.com/richardlieknis/teamsync",
+      demo: "https://teamsync.richardlieknis.com/"
+    },{
       title: "Simple CRM",
       image: "crm-mockup.png",
-      tech: ["TypeScript", "Firebase", "API", "SCSS"],
+      tech: ["TypeScript", "Angular", "Firebase", "API"],
       description: "Angular & Firebase based Customer Relationship Management System. Create users and manage their data.",
       github: "https://github.com/richardlieknis/simplecrm",
       demo: "https://crm.richardlieknis.com/"
@@ -39,14 +46,6 @@ export class ProjectCompComponent implements OnInit {
       description: 'Famous Drinking-Game Online.',
       github: "https://github.com/richardlieknis/RingOfFire",
       demo: "https://richard-lieknis.developerakademie.net/ringoffire/"
-    },
-    {
-      title: "Pokedex",
-      image: "pokedex-mockup.png",
-      tech: ["Javascript", "CSS", "API"],
-      description: '"Pocket-Monster-Deck" using Rest API.',
-      github: "https://github.com/richardlieknis/pokedex",
-      demo: "https://richardlieknis.com/projects/pokedex/"
     },
   ]
   

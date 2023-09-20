@@ -35,7 +35,7 @@
     align-items: center;
     font-family: 'overpass-m';
     font-size: 22px;
-    word-spacing: 5px;
+    word-spacing: 8px;
     line-height: 30px;
     gap: 30px;
     p {
@@ -47,7 +47,7 @@
         flex-direction: column;
         align-items: center;
         max-width: 550px;
-        text-align: justify;
+        text-align:start;
     }
     .img {
         position: relative;
